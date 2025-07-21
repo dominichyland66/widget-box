@@ -1,0 +1,22 @@
+<div class="loan-widget">
+  <label class="title">Loan Calculator</label>
+
+  <!-- new wrapper for the input + button -->
+  <div class="loan-row">
+    <label for="loan-amount">Amount:</label>
+    <input
+      id="loan-amount"
+      type="number"
+      [(ngModel)]="principal"
+      placeholder="e.g. 10000"
+    />
+    <button (click)="calculate()">Calculate Loan Amount</button>
+  </div>
+
+  <div *ngIf="monthlyPayment > 0" class="results">
+    <p>Monthly Payment: {{ monthlyPayment | number:'1.2-2' }}</p>
+    <p>Total Paid:       {{ totalPaid       | number:'1.2-2' }}</p>
+    <p>APR:               {{ annualRate }} %</p>
+    <p>Interest Paid:    {{ totalInterest   | number:'1.2-2' }}</p>
+  </div>
+</div>

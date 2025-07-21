@@ -4,6 +4,8 @@ import { TermsBoxComponent } from '../terms-box/terms-box';
 import { UserDetailsComponent } from '../user-details/user-details';
 import { ProductPickerComponent } from '../product-picker/product-picker';
 import { RouterModule } from '@angular/router';
+import { LoanCalculatorComponent } from '../loan-calculator/loan-calculator.component';
+
 
 @Component({
   selector: 'app-home-page',
@@ -13,7 +15,8 @@ import { RouterModule } from '@angular/router';
     PostcodeFinderComponent,
     TermsBoxComponent,
     UserDetailsComponent,
-    ProductPickerComponent
+    ProductPickerComponent,
+    LoanCalculatorComponent
   ],
   templateUrl: './home-page.html',
   styleUrls: ['./home-page.css']
