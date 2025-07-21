@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Starblazer Products - New UI</title>
+  <style>
+    /* Reset & base */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      padding: 2rem;
+    }
+
+    .demo-wrapper {
+      width: 75vw;
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    header {
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #1e1e1e;
+      margin-bottom: 0.5rem;
+    }
+
+    .info-panel {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #444;
+    }
+
+    .widget-container {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 1.5rem;
+      flex: 1;
+    }
+
+    footer {
+      font-size: 0.875rem;
+      color: #888;
+      text-align: center;
+    }
+
+    button {
+      padding: 0.6rem 1rem;
+      background-color: #4A90E2;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .button-container {
+      padding: 1rem;
+      background: #f5f7fa;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .row {
+      display: flex;
+      gap: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-wrapper">
+    <header>
+      <h1>Starblazer Products - New UI</h1>
+    </header>
+
+    <div class="info-panel">
+      <p>Starblazer continues to innovate and enhance the rocket industry with unmatched expertise and groundbreaking products. Our commitment to quality and customer satisfaction drives us to excel and lead the industry forward. Thank you for exploring our offerings!</p>
+    </div>
+
+    <div class="widget-container">
+      <div class="row">
+        <app-user-details></app-user-details>
+        <app-postcode-finder></app-postcode-finder>
+      </div>
+
+      <app-product-picker></app-product-picker>
+      <app-terms-box></app-terms-box>
+
+      <div class="button-container">
+        <button routerLink="/">
+          Back to Home
+        </button>
+      </div>
+
+      <router-outlet></router-outlet>
+    </div>
+
+    <footer>
+      &copy; 2025 Starblazer Inc.
+    </footer>
+  </div>
+
+  <!-- polyfills first -->
+  <script src="./polyfills.js"></script>
+  <!-- then your Angular elements bundle -->
+  <script src="./main.js"></script>
+</body>
+</html>

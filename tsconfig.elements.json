@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/elements",
+    "types": []
+  },
+  "files": [
+    "src/main-widgets.ts",
+    "src/polyfills-widgets.ts",
+    "src/app/terms-box/terms-box.ts"
+  ],
+  "include": [],
+  "exclude": [
+    "src/**/*.spec.ts",
+    "src/main.ts"
+  ]
+}

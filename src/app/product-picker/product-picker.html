@@ -1,0 +1,12 @@
+<div class="product-box">
+  <label class="title">Loan Term</label>
+  <div class="options">
+    <button 
+      *ngFor="let term of ['1 year', '3 years', '5 years']"
+      (click)="selectTerm(term)"
+      [class.selected]="selectedTerm === term">
+      {{ term }}
+    </button>
+  </div>
+</div>
+

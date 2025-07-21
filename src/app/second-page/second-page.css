@@ -1,0 +1,14 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+  align-items: center; /* Aligns components vertically at the top */
+}
+
+app-user-details,
+app-postcode-finder {
+  flex: 1;
+  min-width: 300px;
+}
+

@@ -1,15 +1,27 @@
-/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
-/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
+/* tsconfig.app.json */
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
     "types": []
   },
-  "include": [
-    "src/**/*.ts"
+
+  // only compile these two files for your main app
+  "files": [
+    "src/main.ts",
+    "src/polyfills.ts"
   ],
+
+  // include only .d.ts shims
+  "include": [
+    "src/**/*.d.ts"
+  ],
+
+  // exclude specs and your extra Elements entrypoints
   "exclude": [
-    "src/**/*.spec.ts"
+    "src/**/*.spec.ts",
+    "src/elements.ts",
+    "src/main-widgets.ts"
   ]
 }
+
