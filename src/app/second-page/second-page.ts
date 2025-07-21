@@ -5,6 +5,7 @@ import { UserDetailsComponent } from '../user-details/user-details';
 import { PostcodeFinderComponent } from '../postcode-finder/postcode-finder';
 import { ProductPickerComponent } from '../product-picker/product-picker';
 import { TermsBoxComponent } from '../terms-box/terms-box';
+import { LoanCalculatorComponent } from '../loan-calculator/loan-calculator.component';
 
 @Component({
   selector: 'app-second-page',
@@ -15,6 +16,7 @@ import { TermsBoxComponent } from '../terms-box/terms-box';
     UserDetailsComponent,
     PostcodeFinderComponent,
     ProductPickerComponent,
+    LoanCalculatorComponent,
     TermsBoxComponent
   ],
   templateUrl: './second-page.html',
