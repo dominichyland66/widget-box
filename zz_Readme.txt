@@ -1,11 +1,11 @@
 This code demonstrates Angular.
 If you use the terminal and run 'ng serve' the Angular server
-Angualr listens on : http://localhost:4200/
-You will see two pages with different coloured Angular componts.
+Angular listens on : http://localhost:4200/
+You will see two pages with different coloured Angular components.
 This is CLASSIC Angular
-I have then used Angular Elements to take one of these components
-The terms and coniditions box and surface that up as a standalone js file.
-The Js File contains just enough Angualr to run the compoment.
+I have then used Angular Elements to take all of these components
+And package them up as a standalone js file.
+The Js File contains just enough Angular to run the compoments.
 The js file also contains the css that defines the look and feel of the component
 It IS possible to generate components in such a way as they respect the
 style of the host page, typically typography and colours.
@@ -15,7 +15,7 @@ There is a lot more detail in how all this works that I know about
 You can copy this component someplace and run it there but for this demonstratesI have created a Demo.html pages
 Run a different server: python3 -m http.server 8080
 and call http://localhost:8080/Demo.html
-The exact same component will render in the simple HTML page.
+The exact same components will render in the simple HTML page.
 The main.js and polyfills.js are loaded to the browser and rendered there.
 Any intelligence would reside at the server side and use a BFF etc.
 
