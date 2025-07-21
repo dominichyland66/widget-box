@@ -6,14 +6,14 @@ This is CLASSIC Angular
 I have then used Angular Elements to take one of these components
 The terms and coniditions box and surface that up as a standalone js file.
 The Js File contains just enough Angualr to run the compoment.
-The js file aalso contains the css that defines the look and feel of the component
+The js file also contains the css that defines the look and feel of the component
 It IS possible to generate components in such a way as they respect the
 style of the host page, typically typography and colours.
 You can see that in this demo the two lines in the red box are not broken, even though that 
 component is being reused it IS still impacted by the underlying CSS
 There is a lot more detail in how all this works that I know about
 You can copy this component someplace and run it there but for this demonstratesI have created a Demo.html pages
-Run a different server - python3 -m http.server 8080
+Run a different server: python3 -m http.server 8080
 and call http://localhost:8080/Demo.html
 The exact same component will render in the simple HTML page.
 The main.js and polyfills.js are loaded to the browser and rendered there.
