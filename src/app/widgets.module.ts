@@ -9,6 +9,7 @@ import { UserDetailsComponent }    from './user-details/user-details';
 import { ProductPickerComponent }  from './product-picker/product-picker';
 import { TermsBoxComponent }       from './terms-box/terms-box';
 
+
 @NgModule({
   imports: [
     BrowserModule,

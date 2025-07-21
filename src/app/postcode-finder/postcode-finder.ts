@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+// src/app/postcode-finder/postcode-finder.ts
+import { Component }        from '@angular/core';
+import { FormsModule }      from '@angular/forms';
+import { AppStateService }  from '../app-state.service';
 
 @Component({
   selector: 'app-postcode-finder',
@@ -11,9 +13,12 @@ import { FormsModule } from '@angular/forms';
 export class PostcodeFinderComponent {
   postcode: string = '';
 
+  constructor(private store: AppStateService) {}
+
   lookupPostcode() {
-    alert(`Looking up: ${this.postcode}`);
+    if (this.postcode.trim()) {
+      // Push the postcode into the shared state
+      this.store.setPostcode(this.postcode.trim());
+    }
   }
 }
-
-

@@ -14,7 +14,7 @@
       display: flex;
       justify-content: center;
       align-items: start;
-      padding: 2rem;
+      padding: 1.5rem;
     }
 
     .demo-wrapper {
@@ -22,104 +22,114 @@
       min-width: 300px;
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      gap: 1rem;
     }
 
     header {
       text-align: center;
+      margin-bottom: 0.5rem;
     }
     header h1 {
-      font-size: 2.5rem;
+      font-size: 2rem;
       color: #1e1e1e;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.25rem;
     }
 
     .info-panel {
       background: #fff;
-      padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      font-size: 1rem;
-      line-height: 1.5;
+      padding: 0.75rem;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+      font-size: 0.95rem;
+      line-height: 1.4;
       color: #444;
     }
 
     .widget-container {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      padding: 1.5rem;
-      flex: 1;
-    }
-
-    footer {
-      font-size: 0.875rem;
-      color: #888;
-      text-align: center;
-    }
-
-    button {
-      padding: 0.6rem 1rem;
-      background-color: #4A90E2;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 1rem;
-      margin-bottom: 20px;
-    }
-
-    .button-container {
-      padding: 1rem;
-      background: #f5f7fa;
-      border-radius: 10px;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      gap: 0.5rem;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+      padding: 0.75rem;
     }
 
     .row {
       display: flex;
-      gap: 1rem;
+      gap: 0.5rem;
+    }
+
+    .widget {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      padding: 0.5rem;
+      flex: 1;
+    }
+
+    .button-container {
+      margin-top: 0.5rem;
+      display: flex;
+      justify-content: center;
+    }
+    .button-container button {
+      padding: 0.5rem 0.8rem;
+      background: #4A90E2;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.75rem;
+      color: #888;
+      margin-top: 0.5rem;
     }
   </style>
 </head>
 <body>
   <div class="demo-wrapper">
+
+    <!-- Header -->
     <header>
       <h1>Starblazer Products - New UI</h1>
     </header>
 
+    <!-- Info panel -->
     <div class="info-panel">
       <p>Starblazer continues to innovate and enhance the rocket industry with unmatched expertise and groundbreaking products. Our commitment to quality and customer satisfaction drives us to excel and lead the industry forward. Thank you for exploring our offerings!</p>
     </div>
 
+    <!-- Widgets -->
     <div class="widget-container">
+
+      <!-- First row: user details + postcode -->
       <div class="row">
-        <app-user-details></app-user-details>
-        <app-postcode-finder></app-postcode-finder>
+        <div class="widget"><app-user-details></app-user-details></div>
+        <div class="widget"><app-postcode-finder></app-postcode-finder></div>
       </div>
 
-      <app-product-picker></app-product-picker>
- <loan-calculator></loan-calculator>
-      <app-terms-box></app-terms-box>
+      <!-- Single full‑width widgets -->
+      <div class="widget"><app-product-picker></app-product-picker></div>
+      <div class="widget"><loan-calculator></loan-calculator></div>
+      <div class="widget"><app-terms-box></app-terms-box></div>
 
+      <!-- Back button -->
       <div class="button-container">
-        <button routerLink="/">
-          Back to Home
-        </button>
+        <button onclick="history.back()">Back to Home</button>
       </div>
-
-
     </div>
 
-    <footer>
-      &copy; 2025 Starblazer Inc.
-    </footer>
+    <!-- Footer -->
+    <footer>&copy; 2025 Starblazer Inc.</footer>
   </div>
 
-  <!-- polyfills first -->
+  <!-- polyfills & bundle -->
   <script src="./polyfills.js"></script>
-  <!-- then your Angular elements bundle -->
   <script src="./main.js"></script>
 </body>
 </html>

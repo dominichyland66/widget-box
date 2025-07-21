@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+// src/app/user-details/user-details.ts
+import { Component }          from '@angular/core';
+import { FormsModule }        from '@angular/forms';
+import { AppStateService }    from '../app-state.service';
 
 @Component({
   selector: 'app-user-details',
@@ -12,7 +14,12 @@ export class UserDetailsComponent {
   name: string = '';
   age: number | null = null;
 
+  constructor(private store: AppStateService) {}
+
   submit() {
-    alert(`Name: ${this.name}, Age: ${this.age}`);
+    if (this.name && this.age != null) {
+      // Push the updated user details into the shared state
+      this.store.setUserDetails({ name: this.name, age: this.age });
+    }
   }
 }
